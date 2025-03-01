@@ -1,0 +1,76 @@
+/* src/components/Navbar.css */
+
+.navbar {
+    width: 100%;
+    height: 25vh;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: height 0.3s ease;
+    z-index: 1000;
+}
+
+/* src/components/Navbar.css */
+
+.navbar {
+    width: 100%;
+    height: 25vh;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: height 0.3s ease, background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.navbar-scrolled {
+    height: 10vh;
+    background-color: #222;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.navbar h1 {
+    margin: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.navbar-scrolled {
+    height: 10vh;
+}
