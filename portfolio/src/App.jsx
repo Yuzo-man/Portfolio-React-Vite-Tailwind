@@ -38,10 +38,10 @@ const experiences = [
     location: "Santiago, Chile",
     period: "Ago 2025 – Mar 2026",
     bullets: [
-      "Corregí +20 errores críticos en la plataforma web del sector salud, asegurando estabilidad y continuidad operacional en producción.",
-      "Implementé +10 nuevas funcionalidades end-to-end con React.js, TypeScript, Redux y microservicios Python, incluyendo integración con AWS S3 y Lambda para conexión con APIs externas.",
+      "Garanticé la estabilidad y continuidad operacional de la plataforma de salud en producción, resolviendo +20 incidencias críticas e implementando mejoras que elevaron la confiabilidad del sistema.",
+      "Desarrollé +10 funcionalidades end-to-end con React.js, TypeScript, Redux y microservicios Python, integrando AWS S3 y Lambda para la conexión con APIs externas.",
       "Integré 5+ plataformas externas vía APIs REST (OAuth 2, webhooks) documentadas con Postman y Swagger. Administré Salesforce, implementé Google Tag Manager y desarrollé app Android nativa con Kotlin.",
-      "Trabajé con Next.js (App Router, SSR) para páginas con datos en tiempo real usando Redux y Trunks para manejo de estado.",
+      "Implementé páginas con Next.js (App Router, SSR) para visualización de datos en tiempo real desde API interna y Salesforce, usando Redux para manejo de estado.",
     ],
   },
   {
@@ -82,8 +82,8 @@ const projects = [
     company: "Care Assistance",
     tech: ["React.js", "TypeScript", "Redux", "Next.js", "Python", "AWS S3", "AWS Lambda", "Salesforce"],
     description:
-      "Corrección de +20 errores críticos e implementación de +10 funcionalidades en plataforma del sector salud. Integración con AWS S3, Lambda, Salesforce y 5+ APIs externas con OAuth2 y webhooks.",
-    highlight: "+10 funcionalidades implementadas",
+      "Desarrollo de +10 funcionalidades end-to-end y estabilización de plataforma del sector salud en producción. Integración con AWS S3, Lambda, Salesforce y 5+ APIs externas vía OAuth2 y webhooks.",
+    highlight: "+10 funcionalidades entregadas en producción",
   },
   {
     title: "Automatización ETL & Dashboard KPI",
@@ -142,7 +142,7 @@ const App = () => {
                 GitHub
               </a>
               <a
-                href="https://linkedin.com/in/pablo-cerda-isasmendi"
+                href="https://www.linkedin.com/in/pablo-alejandro-cerda-isasmendi-5713892a0/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border border-gray-500 hover:border-purple-400 text-gray-300 hover:text-purple-400 px-6 py-3 rounded-lg font-medium transition-colors"
@@ -154,8 +154,8 @@ const App = () => {
             {/* Logros rápidos */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="bg-gray-800 bg-opacity-80 backdrop-blur rounded-2xl p-5 border border-gray-700">
-                <p className="text-3xl font-bold text-purple-400">+20</p>
-                <p className="text-sm text-gray-400 mt-1">Bugs críticos resueltos en producción</p>
+                <p className="text-3xl font-bold text-purple-400">+10</p>
+                <p className="text-sm text-gray-400 mt-1">Funcionalidades entregadas en producción</p>
               </div>
               <div className="bg-gray-800 bg-opacity-80 backdrop-blur rounded-2xl p-5 border border-gray-700">
                 <p className="text-3xl font-bold text-purple-400">98%</p>
@@ -373,13 +373,13 @@ const App = () => {
                 <span className="text-gray-200 text-sm">+56 9 5522 7000</span>
               </a>
               <a
-                href="https://linkedin.com/in/pablo-cerda-isasmendi"
+                href="https://www.linkedin.com/in/pablo-alejandro-cerda-isasmendi-5713892a0/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-3 bg-gray-700 hover:bg-gray-600 rounded-xl p-4 transition-colors"
               >
                 <span className="text-purple-400 text-xl">💼</span>
-                <span className="text-gray-200 text-sm">linkedin.com/in/pablo-cerda-isasmendi</span>
+                <span className="text-gray-200 text-sm">linkedin.com/in/pablo-alejandro-cerda-isasmendi</span>
               </a>
               <a
                 href="https://github.com/Yuzo-man"
