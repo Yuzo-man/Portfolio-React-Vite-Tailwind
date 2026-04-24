@@ -9,7 +9,10 @@
       "Bash(node -e \"const si = require\\('./node_modules/react-icons/si/index.js'\\); const icons = ['SiCss','SiCss3','SiMicrosoftazure','SiAzure','SiPowerbi','SiPowerBi','SiMicrosoftpowerpoint']; icons.forEach\\(i => console.log\\(i, !!si[i]\\)\\);\")",
       "Bash(node -e \"const si = require\\('./node_modules/react-icons/si/index.js'\\); console.log\\(Object.keys\\(si\\).filter\\(k => k.toLowerCase\\(\\).includes\\('azure'\\) || k.toLowerCase\\(\\).includes\\('power'\\) || k.toLowerCase\\(\\).includes\\('css'\\)\\).join\\('\\\\n'\\)\\);\")",
       "Bash(node -e \"const si = require\\('./node_modules/react-icons/si/index.js'\\); console.log\\(Object.keys\\(si\\).filter\\(k => k.toLowerCase\\(\\).includes\\('micro'\\) || k.toLowerCase\\(\\).includes\\('azure'\\)\\).join\\('\\\\n'\\)\\);\")",
-      "Bash(node -e \"const fa = require\\('./node_modules/react-icons/fa/index.js'\\); console.log\\(Object.keys\\(fa\\).filter\\(k => k.toLowerCase\\(\\).includes\\('micro'\\) || k.toLowerCase\\(\\).includes\\('aws'\\) || k.toLowerCase\\(\\).includes\\('amazon'\\)\\).join\\('\\\\n'\\)\\);\")"
+      "Bash(node -e \"const fa = require\\('./node_modules/react-icons/fa/index.js'\\); console.log\\(Object.keys\\(fa\\).filter\\(k => k.toLowerCase\\(\\).includes\\('micro'\\) || k.toLowerCase\\(\\).includes\\('aws'\\) || k.toLowerCase\\(\\).includes\\('amazon'\\)\\).join\\('\\\\n'\\)\\);\")",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
     ]
   }
 }
