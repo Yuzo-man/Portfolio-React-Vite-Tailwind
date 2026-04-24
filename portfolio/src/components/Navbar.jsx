@@ -4,13 +4,14 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Pclogo from "../assets/svg/PC.svg";
 
 const navigation = [
-  { name: 'Inicio',       href: '#inicio' },
-  { name: 'Sobre mí',     href: '#sobre-mi' },
-  { name: 'Habilidades',  href: '#habilidades' },
-  { name: 'Experiencia',  href: '#experiencia' },
-  { name: 'Proyectos',    href: '#proyectos' },
-  { name: 'Educación',    href: '#educacion' },
-  { name: 'Contacto',     href: '#contacto' },
+  { name: 'Inicio',              href: '#inicio' },
+  { name: 'Sobre mí',            href: '#sobre-mi' },
+  { name: 'Habilidades',         href: '#habilidades' },
+  { name: 'Experiencia',         href: '#experiencia' },
+  { name: 'Proyectos',           href: '#proyectos' },
+  { name: 'Proyectos Personales',href: '#proyectos-personales' },
+  { name: 'Educación',           href: '#educacion' },
+  { name: 'Contacto',            href: '#contacto' },
 ];
 
 export default function Navbar() {
