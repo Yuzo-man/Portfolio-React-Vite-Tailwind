@@ -61,12 +61,12 @@ const categoryConfig = {
 };
 
 const skillCategories = [
-  { category: 'Frontend',       skills: ['React.js','Angular','TypeScript','JavaScript ES6+','Vue.js','Next.js','Redux','HTML5','CSS3','Tailwind CSS'] },
-  { category: 'Backend',        skills: ['Python','Django','DRF','Java Spring Boot','PHP Laravel','Node.js','NestJS','API REST','JWT','OAuth2','Microservicios'] },
-  { category: 'Bases de Datos', skills: ['PostgreSQL','MySQL','SQLite','Databricks'] },
-  { category: 'Cloud / AWS',    skills: ['AWS S3','AWS Lambda','Azure Data Factory','Azure Databricks','Power BI','Pandas','NumPy'] },
-  { category: 'DevOps / CI-CD', skills: ['Git','GitHub','Azure DevOps','Git Flow','Docker','Postman','Swagger','CI/CD pipelines'] },
-  { category: 'Herramientas',   skills: ['Salesforce','ServiceNow','Google Tag Manager','Android Studio','Kotlin','Odoo','Shopify'] },
+  { category: 'Frontend',       skills: ['React.js','Next.js','Angular','Vue.js','TypeScript','JavaScript ES6+','Redux','HTML5','CSS3','Tailwind CSS'] },
+  { category: 'Backend',        skills: ['Python','Django','DRF','Node.js','NestJS','Java Spring Boot','PHP Laravel','API REST','JWT','OAuth2','Microservicios'] },
+  { category: 'Bases de Datos', skills: ['PostgreSQL','MySQL','SQLite'] },
+  { category: 'Cloud / AWS',    skills: ['AWS S3','AWS Lambda','Azure Data Factory','Azure Databricks','Databricks','Power BI','Pandas','NumPy'] },
+  { category: 'DevOps / CI-CD', skills: ['Git','GitHub','Docker','Azure DevOps','Git Flow','CI/CD pipelines','Postman','Swagger'] },
+  { category: 'Herramientas',   skills: ['Salesforce','ServiceNow','Odoo','Shopify','Google Tag Manager','Android Studio','Kotlin'] },
 ];
 
 // Static metadata merged with translations at render time
@@ -150,10 +150,13 @@ const App = () => {
           <div className="absolute top-20 left-10 w-72 h-72 bg-purple-400 dark:bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-72 h-72 bg-cyan-400 dark:bg-cyan-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
 
+          {/* Fade hero bottom into next section */}
+          <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-b from-transparent to-white dark:to-gray-900 pointer-events-none z-20"></div>
+
           <div className="relative z-10 max-w-3xl w-full">
-            <p className="text-purple-700 dark:text-purple-400 text-sm font-semibold mb-6 border border-purple-200 dark:border-purple-800 bg-purple-50 dark:bg-purple-950/50 inline-block px-4 py-1.5 rounded-full whitespace-nowrap">
+            <span className="text-purple-700 dark:text-purple-400 text-sm font-semibold mb-6 border border-purple-200 dark:border-purple-800 bg-purple-50 dark:bg-purple-950/50 inline-block px-4 py-1.5 rounded-full">
               {t.hero.badge}
-            </p>
+            </span>
             <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
               <span className="bg-gradient-to-r from-gray-900 to-purple-700 dark:from-white dark:via-purple-200 dark:to-purple-400 bg-clip-text text-transparent">
                 Pablo Cerda
@@ -162,7 +165,7 @@ const App = () => {
               <span className="text-gray-900 dark:text-white">Isasmendi</span>
             </h1>
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-2 font-light">{t.hero.title}</p>
-            <p className="text-gray-500 mb-10 text-sm">{t.hero.subtitle}</p>
+            <p className="text-gray-500 mb-10 text-sm px-4">{t.hero.subtitle}</p>
 
             <div className="flex flex-wrap justify-center gap-3 mb-12">
               <a href="mailto:pablo.cerdaisas@gmail.com"
@@ -181,9 +184,9 @@ const App = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {t.hero.stats.map((s) => (
-                <div key={s.value} className="bg-white/70 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl p-5 border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-700 transition-colors shadow-sm dark:shadow-none">
+                <div key={s.value} className="bg-white/70 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl p-5 border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-700 transition-colors shadow-sm dark:shadow-none flex flex-col min-h-[6rem]">
                   <p className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-purple-400 dark:from-purple-400 dark:to-cyan-400 bg-clip-text text-transparent">{s.value}</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{s.label}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-snug">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -191,8 +194,10 @@ const App = () => {
         </section>
 
         {/* ── SOBRE MÍ ── */}
-        <section id="sobre-mi" className="relative py-24 px-6">
-          <div className="absolute inset-0 bg-cover bg-center opacity-5 dark:opacity-10" style={{ backgroundImage: `url(${backgroundSM})` }}></div>
+        <section id="sobre-mi" className="relative py-24 px-6 overflow-hidden">
+          {/* Imagen de fondo con transición suave arriba y abajo */}
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${backgroundSM})` }}></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white via-white/88 to-white dark:from-gray-900 dark:via-gray-900/88 dark:to-gray-900"></div>
           <div className="relative z-10 max-w-4xl mx-auto">
             <SectionTitle>{t.about.title}</SectionTitle>
             <div className="bg-white/80 dark:bg-gray-800/75 backdrop-blur-lg rounded-3xl p-8 border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-800 transition-colors shadow-sm dark:shadow-none">
@@ -342,8 +347,10 @@ const App = () => {
         </section>
 
         {/* ── EDUCACIÓN ── */}
-        <section id="educacion" className="relative py-24 px-6 bg-gray-100/60 dark:bg-gray-800/30">
-          <div className="absolute inset-0 bg-cover bg-center opacity-5" style={{ backgroundImage: `url(${backgroundEst})` }}></div>
+        <section id="educacion" className="relative py-24 px-6 overflow-hidden">
+          {/* Imagen de fondo con transición suave arriba y abajo */}
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${backgroundEst})` }}></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-100 via-gray-100/85 to-gray-100 dark:from-gray-900 dark:via-gray-900/85 dark:to-gray-900"></div>
           <div className="relative z-10 max-w-4xl mx-auto">
             <SectionTitle>{t.education.title}</SectionTitle>
             <div className="space-y-5">
