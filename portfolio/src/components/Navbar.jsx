@@ -27,7 +27,7 @@ export default function Navbar() {
 
               {/* Mobile/tablet menu button — visible below lg */}
               <div className="absolute inset-y-0 left-0 flex items-center lg:hidden">
-                <DisclosureButton className="inline-flex items-center justify-center p-2 rounded-md text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500">
+                <DisclosureButton className="inline-flex items-center justify-center p-2 rounded-md text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gold-500">
                   <span className="sr-only">Abrir menú</span>
                   {open ? <XMarkIcon className="block h-6 w-6" /> : <Bars3Icon className="block h-6 w-6" />}
                 </DisclosureButton>
@@ -37,7 +37,7 @@ export default function Navbar() {
               <div className="flex-1 flex items-center justify-center lg:items-stretch lg:justify-start">
                 {/* Logo */}
                 <div className="flex-shrink-0 flex items-center">
-                  <img className="h-8 w-auto rounded-full border-2 border-purple-500" src={Pclogo} alt="Pablo Cerda" />
+                  <img className="h-8 w-auto rounded-full border-2 border-gold-500" src={Pclogo} alt="Pablo Cerda" />
                 </div>
 
                 {/* Desktop nav items — only visible from lg up */}
@@ -63,7 +63,7 @@ export default function Navbar() {
                   <button
                     onClick={() => setLang('es')}
                     className={`px-2.5 py-1 rounded-md text-xs font-semibold transition-colors ${
-                      lang === 'es' ? 'bg-purple-600 text-white shadow' : 'text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'
+                      lang === 'es' ? 'bg-gold-600 text-white shadow' : 'text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'
                     }`}
                   >
                     ES
@@ -71,7 +71,7 @@ export default function Navbar() {
                   <button
                     onClick={() => setLang('en')}
                     className={`px-2.5 py-1 rounded-md text-xs font-semibold transition-colors ${
-                      lang === 'en' ? 'bg-purple-600 text-white shadow' : 'text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'
+                      lang === 'en' ? 'bg-gold-600 text-white shadow' : 'text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'
                     }`}
                   >
                     EN
@@ -86,13 +86,13 @@ export default function Navbar() {
                 >
                   {isDark
                     ? <SunIcon className="h-4 w-4 text-yellow-500" />
-                    : <MoonIcon className="h-4 w-4 text-purple-500" />}
+                    : <MoonIcon className="h-4 w-4 text-gold-500" />}
                 </button>
 
                 {/* CTA */}
                 <a
                   href="mailto:pablo.cerdaisas@gmail.com"
-                  className="bg-purple-600 hover:bg-purple-500 text-white text-xs font-semibold px-3 py-2 rounded-lg transition-colors whitespace-nowrap"
+                  className="bg-gold-600 hover:bg-gold-500 text-white text-xs font-semibold px-3 py-2 rounded-lg transition-colors whitespace-nowrap"
                 >
                   {t.nav.contactar}
                 </a>
@@ -102,11 +102,11 @@ export default function Navbar() {
               <div className="absolute inset-y-0 right-0 flex items-center gap-1.5 pr-2 lg:hidden">
                 <div className="flex items-center bg-gray-100 dark:bg-gray-800 rounded-lg p-0.5 border border-gray-200 dark:border-gray-700">
                   <button onClick={() => setLang('es')}
-                    className={`px-2 py-0.5 rounded text-xs font-semibold transition-colors ${lang === 'es' ? 'bg-purple-600 text-white' : 'text-gray-500 dark:text-gray-400'}`}>
+                    className={`px-2 py-0.5 rounded text-xs font-semibold transition-colors ${lang === 'es' ? 'bg-gold-600 text-white' : 'text-gray-500 dark:text-gray-400'}`}>
                     ES
                   </button>
                   <button onClick={() => setLang('en')}
-                    className={`px-2 py-0.5 rounded text-xs font-semibold transition-colors ${lang === 'en' ? 'bg-purple-600 text-white' : 'text-gray-500 dark:text-gray-400'}`}>
+                    className={`px-2 py-0.5 rounded text-xs font-semibold transition-colors ${lang === 'en' ? 'bg-gold-600 text-white' : 'text-gray-500 dark:text-gray-400'}`}>
                     EN
                   </button>
                 </div>
@@ -114,7 +114,7 @@ export default function Navbar() {
                   onClick={() => setIsDark(!isDark)}
                   className="p-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 transition-colors"
                 >
-                  {isDark ? <SunIcon className="h-4 w-4 text-yellow-500" /> : <MoonIcon className="h-4 w-4 text-purple-500" />}
+                  {isDark ? <SunIcon className="h-4 w-4 text-yellow-500" /> : <MoonIcon className="h-4 w-4 text-gold-500" />}
                 </button>
               </div>
             </div>
@@ -136,7 +136,7 @@ export default function Navbar() {
               <div className="pt-2 px-3">
                 <a
                   href="mailto:pablo.cerdaisas@gmail.com"
-                  className="block bg-purple-600 hover:bg-purple-500 text-white text-center rounded-md px-3 py-2 text-sm font-medium transition-colors"
+                  className="block bg-gold-600 hover:bg-gold-500 text-white text-center rounded-md px-3 py-2 text-sm font-medium transition-colors"
                 >
                   {t.nav.contactar}
                 </a>

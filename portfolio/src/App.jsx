@@ -6,19 +6,18 @@ import backgroundEst from "./assets/background/estudios2.jpg";
 import { useApp } from "./context/AppContext";
 
 import {
-  SiReact, SiAngular, SiTypescript, SiJavascript, SiVuedotjs, SiNextdotjs,
+  SiReact, SiTypescript, SiJavascript, SiVuedotjs, SiNextdotjs,
   SiRedux, SiHtml5, SiCss, SiTailwindcss,
-  SiPython, SiDjango, SiPhp, SiNodedotjs, SiNestjs, SiSpring,
+  SiPython, SiDjango, SiPhp, SiNodedotjs, SiNestjs,
   SiPostgresql, SiMysql, SiSqlite,
   SiGit, SiGithub, SiDocker, SiPostman,
-  SiSalesforce, SiKotlin, SiShopify, SiAndroid,
+  SiSalesforce, SiKotlin, SiAndroid,
 } from 'react-icons/si';
-import { FaAws, FaMicrosoft, FaCode, FaServer, FaDatabase, FaCloud, FaCogs, FaWrench, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaMicrosoft, FaCode, FaServer, FaDatabase, FaCloud, FaCogs, FaWrench, FaExternalLinkAlt } from 'react-icons/fa';
 
 /* ─── Static data (non-translatable) ─── */
 const iconMap = {
   'React.js':          { icon: SiReact,       color: '#61DAFB' },
-  'Angular':           { icon: SiAngular,      color: '#DD0031' },
   'TypeScript':        { icon: SiTypescript,   color: '#3178C6' },
   'JavaScript ES6+':   { icon: SiJavascript,   color: '#F7DF1E' },
   'Vue.js':            { icon: SiVuedotjs,     color: '#42B883' },
@@ -32,12 +31,9 @@ const iconMap = {
   'PHP Laravel':       { icon: SiPhp,          color: '#777BB4' },
   'Node.js':           { icon: SiNodedotjs,    color: '#339933' },
   'NestJS':            { icon: SiNestjs,       color: '#E0234E' },
-  'Java Spring Boot':  { icon: SiSpring,       color: '#6DB33F' },
   'PostgreSQL':        { icon: SiPostgresql,   color: '#4169E1' },
   'MySQL':             { icon: SiMysql,        color: '#4479A1' },
   'SQLite':            { icon: SiSqlite,       color: '#7FB1C8' },
-  'AWS S3':            { icon: FaAws,          color: '#FF9900' },
-  'AWS Lambda':        { icon: FaAws,          color: '#FF9900' },
   'Azure Data Factory':{ icon: FaMicrosoft,    color: '#0078D4' },
   'Azure Databricks':  { icon: FaMicrosoft,    color: '#0078D4' },
   'Power BI':          { icon: FaMicrosoft,    color: '#F2C811' },
@@ -48,7 +44,6 @@ const iconMap = {
   'Salesforce':        { icon: SiSalesforce,   color: '#00A1E0' },
   'Android Studio':    { icon: SiAndroid,      color: '#3DDC84' },
   'Kotlin':            { icon: SiKotlin,       color: '#7F52FF' },
-  'Shopify':           { icon: SiShopify,      color: '#96BF48' },
 };
 
 const categoryConfig = {
@@ -61,24 +56,24 @@ const categoryConfig = {
 };
 
 const skillCategories = [
-  { category: 'Frontend',       skills: ['React.js','Next.js','Angular','Vue.js','TypeScript','JavaScript ES6+','Redux','HTML5','CSS3','Tailwind CSS'] },
-  { category: 'Backend',        skills: ['Python','Django','DRF','Node.js','NestJS','Java Spring Boot','PHP Laravel','API REST','JWT','OAuth2','Microservicios'] },
+  { category: 'Frontend',       skills: ['React.js','Next.js','Vue.js','TypeScript','JavaScript ES6+','Redux','HTML5','CSS3','Tailwind CSS'] },
+  { category: 'Backend',        skills: ['Python','Django','DRF','Node.js','NestJS','PHP Laravel','API REST','JWT','Microservicios'] },
   { category: 'Bases de Datos', skills: ['PostgreSQL','MySQL','SQLite'] },
-  { category: 'Cloud / AWS',    skills: ['AWS S3','AWS Lambda','Azure Data Factory','Azure Databricks','Databricks','Power BI','Pandas','NumPy'] },
-  { category: 'DevOps / CI-CD', skills: ['Git','GitHub','Docker','Azure DevOps','Git Flow','CI/CD pipelines','Postman','Swagger'] },
-  { category: 'Herramientas',   skills: ['Salesforce','ServiceNow','Odoo','Shopify','Google Tag Manager','Android Studio','Kotlin'] },
+  { category: 'Cloud / AWS',    skills: ['Azure Data Factory','Azure Databricks','Databricks','Power BI','Pandas','NumPy'] },
+  { category: 'DevOps / CI-CD', skills: ['Git','GitHub','Docker','Azure DevOps','Git Flow','CI/CD pipelines','Postman'] },
+  { category: 'Herramientas',   skills: ['Salesforce','ServiceNow','Google Tag Manager','Android Studio','Kotlin'] },
 ];
 
 // Static metadata merged with translations at render time
 const expMeta = [
-  { company: 'Care Assistance',       location: 'Santiago, Chile',    color: 'border-purple-500', dot: 'bg-purple-500' },
+  { company: 'Care Assistance',       location: 'Santiago, Chile',    color: 'border-gold-500', dot: 'bg-gold-500' },
   { company: 'Coasin Logicalis',      location: 'Antofagasta, Chile', color: 'border-blue-500',   dot: 'bg-blue-500' },
   { company: 'Minera Zaldívar',       location: 'Antofagasta, Chile', color: 'border-yellow-500', dot: 'bg-yellow-500' },
   { company: 'Sociedad Fuelles Ltda', location: 'Antofagasta, Chile', color: 'border-green-500',  dot: 'bg-green-500' },
 ];
 
 const projTech = [
-  ['React.js','TypeScript','Redux','Next.js','Python','AWS S3','AWS Lambda','Salesforce'],
+  ['React.js','TypeScript','Redux','Next.js','Python','Salesforce'],
   ['Python','Azure Databricks','Azure Data Factory','Power BI'],
   ['Django','React.js','PostgreSQL'],
 ];
@@ -101,7 +96,7 @@ const SectionTitle = ({ children }) => (
   <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white relative">
     <span className="relative">
       {children}
-      <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-12 h-0.5 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full"></span>
+      <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-12 h-0.5 bg-gradient-to-r from-gold-500 to-cyan-500 rounded-full"></span>
     </span>
   </h2>
 );
@@ -146,19 +141,19 @@ const App = () => {
 
         {/* ── HERO ── */}
         <section id="inicio" className="min-h-screen flex flex-col justify-center items-center px-6 text-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-white to-purple-50 dark:from-gray-900 dark:via-gray-900 dark:to-purple-950"></div>
-          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-400 dark:bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-white to-gold-50 dark:from-gray-900 dark:via-gray-900 dark:to-gold-950"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-gold-400 dark:bg-gold-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-72 h-72 bg-cyan-400 dark:bg-cyan-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
 
           {/* Fade hero bottom into next section */}
           <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-b from-transparent to-white dark:to-gray-900 pointer-events-none z-20"></div>
 
           <div className="relative z-10 max-w-3xl w-full">
-            <span className="text-purple-700 dark:text-purple-400 text-sm font-semibold mb-6 border border-purple-200 dark:border-purple-800 bg-purple-50 dark:bg-purple-950/50 inline-block px-4 py-1.5 rounded-full">
+            <span className="text-gold-700 dark:text-gold-400 text-sm font-semibold mb-6 border border-gold-200 dark:border-gold-800 bg-gold-50 dark:bg-gold-950/50 inline-block px-4 py-1.5 rounded-full">
               {t.hero.badge}
             </span>
             <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-              <span className="bg-gradient-to-r from-gray-900 to-purple-700 dark:from-white dark:via-purple-200 dark:to-purple-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-gray-900 to-gold-700 dark:from-white dark:via-gold-200 dark:to-gold-400 bg-clip-text text-transparent">
                 Pablo Cerda
               </span>
               <br />
@@ -169,7 +164,7 @@ const App = () => {
 
             <div className="flex flex-wrap justify-center gap-3 mb-12">
               <a href="mailto:pablo.cerdaisas@gmail.com"
-                className="bg-purple-600 hover:bg-purple-500 text-white px-7 py-3 rounded-full font-medium transition-all shadow-lg shadow-purple-200 dark:shadow-purple-900/50 hover:shadow-purple-300 dark:hover:shadow-purple-700/50">
+                className="bg-gold-600 hover:bg-gold-500 text-white px-7 py-3 rounded-full font-medium transition-all shadow-lg shadow-gold-200 dark:shadow-gold-900/50 hover:shadow-gold-300 dark:hover:shadow-gold-700/50">
                 {t.nav.contactar}
               </a>
               <a href="https://github.com/Yuzo-man" target="_blank" rel="noopener noreferrer"
@@ -184,8 +179,8 @@ const App = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {t.hero.stats.map((s) => (
-                <div key={s.value} className="bg-white/70 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl p-5 border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-700 transition-colors shadow-sm dark:shadow-none flex flex-col min-h-[6rem]">
-                  <p className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-purple-400 dark:from-purple-400 dark:to-cyan-400 bg-clip-text text-transparent">{s.value}</p>
+                <div key={s.value} className="bg-white/70 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl p-5 border border-gray-200 dark:border-gray-700 hover:border-gold-300 dark:hover:border-gold-700 transition-colors shadow-sm dark:shadow-none flex flex-col min-h-[6rem]">
+                  <p className="text-3xl font-bold bg-gradient-to-r from-gold-600 to-gold-400 dark:from-gold-400 dark:to-cyan-400 bg-clip-text text-transparent">{s.value}</p>
                   <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-snug">{s.label}</p>
                 </div>
               ))}
@@ -200,22 +195,22 @@ const App = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-white via-white/88 to-white dark:from-gray-900 dark:via-gray-900/88 dark:to-gray-900"></div>
           <div className="relative z-10 max-w-4xl mx-auto">
             <SectionTitle>{t.about.title}</SectionTitle>
-            <div className="bg-white/80 dark:bg-gray-800/75 backdrop-blur-lg rounded-3xl p-8 border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-800 transition-colors shadow-sm dark:shadow-none">
+            <div className="bg-white/80 dark:bg-gray-800/75 backdrop-blur-lg rounded-3xl p-8 border border-gray-200 dark:border-gray-700 hover:border-gold-300 dark:hover:border-gold-800 transition-colors shadow-sm dark:shadow-none">
               <p className="text-gray-700 dark:text-gray-200 text-lg leading-relaxed text-justify">{t.about.p1}</p>
               <p className="text-gray-700 dark:text-gray-200 text-lg leading-relaxed text-justify mt-4">
                 {t.about.p2pre}
-                <span className="text-purple-600 dark:text-purple-400 font-semibold">{t.about.p2tech}</span>
+                <span className="text-gold-600 dark:text-gold-400 font-semibold">{t.about.p2tech}</span>
                 {t.about.p2suf}
               </p>
               <p className="text-gray-700 dark:text-gray-200 text-lg leading-relaxed text-justify mt-4">
                 {t.about.p3pre}
-                <span className="text-purple-600 dark:text-purple-400 font-semibold">{t.about.p3hi}</span>
+                <span className="text-gold-600 dark:text-gold-400 font-semibold">{t.about.p3hi}</span>
                 {t.about.p3suf}
               </p>
               <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700 flex flex-wrap gap-5 text-sm text-gray-500 dark:text-gray-400">
                 <span>📍 Santiago, Chile</span>
-                <a href="mailto:pablo.cerdaisas@gmail.com" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">✉️ pablo.cerdaisas@gmail.com</a>
-                <a href="tel:+56955227000" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">📞 +56 9 5522 7000</a>
+                <a href="mailto:pablo.cerdaisas@gmail.com" className="hover:text-gold-600 dark:hover:text-gold-400 transition-colors">✉️ pablo.cerdaisas@gmail.com</a>
+                <a href="tel:+56955227000" className="hover:text-gold-600 dark:hover:text-gold-400 transition-colors">📞 +56 9 5522 7000</a>
                 <span>🌐 {t.about.english}</span>
               </div>
             </div>
@@ -252,7 +247,7 @@ const App = () => {
           <div className="max-w-4xl mx-auto">
             <SectionTitle>{t.experience.title}</SectionTitle>
             <div className="relative">
-              <div className="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-purple-500 via-blue-500 to-green-500 hidden md:block"></div>
+              <div className="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-gold-500 via-blue-500 to-green-500 hidden md:block"></div>
               <div className="space-y-6">
                 {experiences.map((exp, i) => (
                   <div key={i} className="relative md:pl-12">
@@ -261,7 +256,7 @@ const App = () => {
                       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
                         <div>
                           <h3 className="text-gray-900 dark:text-white font-bold text-lg">{exp.role}</h3>
-                          <p className="text-purple-600 dark:text-purple-400 font-medium">{exp.company}</p>
+                          <p className="text-gold-600 dark:text-gold-400 font-medium">{exp.company}</p>
                           <p className="text-gray-500 text-sm mt-0.5">📍 {exp.location}</p>
                         </div>
                         <span className="text-gray-600 dark:text-gray-400 text-xs whitespace-nowrap bg-gray-100 dark:bg-gray-700 px-3 py-1.5 rounded-full self-start border border-gray-200 dark:border-gray-600">
@@ -271,7 +266,7 @@ const App = () => {
                       <ul className="space-y-2">
                         {exp.bullets.map((b, j) => (
                           <li key={j} className="text-gray-600 dark:text-gray-300 text-sm flex gap-2">
-                            <span className="text-purple-500 mt-0.5 flex-shrink-0">▸</span>
+                            <span className="text-gold-500 mt-0.5 flex-shrink-0">▸</span>
                             <span>{b}</span>
                           </li>
                         ))}
@@ -290,9 +285,9 @@ const App = () => {
             <SectionTitle>{t.projects.title}</SectionTitle>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {projects.map((proj, i) => (
-                <div key={i} className="bg-white dark:bg-gray-800/70 backdrop-blur rounded-2xl border border-gray-200 dark:border-gray-700 flex flex-col overflow-hidden hover:border-purple-300 dark:hover:border-purple-700 hover:-translate-y-1 transition-all duration-200 shadow-sm dark:shadow-none group">
-                  <div className="bg-gradient-to-r from-purple-50 to-gray-50 dark:from-purple-900 dark:to-gray-800 px-6 py-4 border-b border-gray-200 dark:border-gray-700">
-                    <p className="text-purple-600 dark:text-purple-400 text-xs font-semibold uppercase tracking-wider mb-1">{proj.company}</p>
+                <div key={i} className="bg-white dark:bg-gray-800/70 backdrop-blur rounded-2xl border border-gray-200 dark:border-gray-700 flex flex-col overflow-hidden hover:border-gold-300 dark:hover:border-gold-700 hover:-translate-y-1 transition-all duration-200 shadow-sm dark:shadow-none group">
+                  <div className="bg-gradient-to-r from-gold-50 to-gray-50 dark:from-gold-900 dark:to-gray-800 px-6 py-4 border-b border-gray-200 dark:border-gray-700">
+                    <p className="text-gold-600 dark:text-gold-400 text-xs font-semibold uppercase tracking-wider mb-1">{proj.company}</p>
                     <h3 className="text-gray-900 dark:text-white font-bold text-base">{proj.title}</h3>
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
@@ -317,8 +312,8 @@ const App = () => {
             <p className="text-center text-gray-500 dark:text-gray-400 text-sm mb-12 -mt-6">{t.personalProjects.subtitle}</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {personalProjects.map((proj, i) => (
-                <div key={i} className="bg-white dark:bg-gray-800/70 backdrop-blur rounded-2xl border border-gray-200 dark:border-gray-700 flex flex-col overflow-hidden hover:border-purple-300 dark:hover:border-purple-700 hover:-translate-y-1 transition-all duration-200 shadow-sm dark:shadow-none">
-                  <div className="bg-gradient-to-r from-gray-50 to-purple-50/50 dark:from-gray-800 dark:to-purple-950/50 px-6 py-4 border-b border-gray-200 dark:border-gray-700 flex items-start justify-between gap-3">
+                <div key={i} className="bg-white dark:bg-gray-800/70 backdrop-blur rounded-2xl border border-gray-200 dark:border-gray-700 flex flex-col overflow-hidden hover:border-gold-300 dark:hover:border-gold-700 hover:-translate-y-1 transition-all duration-200 shadow-sm dark:shadow-none">
+                  <div className="bg-gradient-to-r from-gray-50 to-gold-50/50 dark:from-gray-800 dark:to-gold-950/50 px-6 py-4 border-b border-gray-200 dark:border-gray-700 flex items-start justify-between gap-3">
                     <div>
                       <div className="flex items-center gap-2 mb-1">
                         <SiGithub className="text-gray-400 text-sm" />
@@ -355,15 +350,15 @@ const App = () => {
             <SectionTitle>{t.education.title}</SectionTitle>
             <div className="space-y-5">
               {t.education.items.map((edu, i) => (
-                <div key={i} className="bg-white/80 dark:bg-gray-800/75 backdrop-blur rounded-2xl p-6 border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-700 transition-colors flex gap-4 shadow-sm dark:shadow-none">
-                  <div className={`flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-2xl border ${i === 0 ? 'bg-purple-50 dark:bg-purple-900 border-purple-200 dark:border-purple-700' : 'bg-blue-50 dark:bg-blue-900 border-blue-200 dark:border-blue-700'}`}>
+                <div key={i} className="bg-white/80 dark:bg-gray-800/75 backdrop-blur rounded-2xl p-6 border border-gray-200 dark:border-gray-700 hover:border-gold-300 dark:hover:border-gold-700 transition-colors flex gap-4 shadow-sm dark:shadow-none">
+                  <div className={`flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-2xl border ${i === 0 ? 'bg-gold-50 dark:bg-gold-900 border-gold-200 dark:border-gold-700' : 'bg-blue-50 dark:bg-blue-900 border-blue-200 dark:border-blue-700'}`}>
                     {edu.emoji}
                   </div>
                   <div className="flex-grow">
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
                       <div>
                         <h3 className="text-gray-900 dark:text-white font-bold text-lg">{edu.degree}</h3>
-                        <p className="text-purple-600 dark:text-purple-400 font-medium">{edu.institution}</p>
+                        <p className="text-gold-600 dark:text-gold-400 font-medium">{edu.institution}</p>
                         <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{edu.location} · {edu.description}</p>
                       </div>
                       <span className="text-gray-500 dark:text-gray-400 text-xs whitespace-nowrap bg-gray-100 dark:bg-gray-700 px-3 py-1.5 rounded-full self-start border border-gray-200 dark:border-gray-600">
@@ -390,14 +385,14 @@ const App = () => {
                 { icon: <SiGithub />, label: 'github.com/Yuzo-man', href: 'https://github.com/Yuzo-man' },
               ].map(({ icon, label, href }) => (
                 <a key={href} href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-xl p-4 transition-colors border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-700 shadow-sm dark:shadow-none">
-                  <span className="text-purple-600 dark:text-purple-400 text-xl flex-shrink-0">{icon}</span>
+                  className="flex items-center justify-center gap-3 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-xl p-4 transition-colors border border-gray-200 dark:border-gray-700 hover:border-gold-300 dark:hover:border-gold-700 shadow-sm dark:shadow-none">
+                  <span className="text-gold-600 dark:text-gold-400 text-xl flex-shrink-0">{icon}</span>
                   <span className="text-gray-700 dark:text-gray-200 text-sm truncate">{label}</span>
                 </a>
               ))}
             </div>
             <a href="mailto:pablo.cerdaisas@gmail.com"
-              className="inline-block bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-500 hover:to-purple-400 text-white px-12 py-4 rounded-full font-semibold transition-all shadow-lg shadow-purple-200 dark:shadow-purple-900/50 text-lg">
+              className="inline-block bg-gradient-to-r from-gold-600 to-gold-500 hover:from-gold-500 hover:to-gold-400 text-white px-12 py-4 rounded-full font-semibold transition-all shadow-lg shadow-gold-200 dark:shadow-gold-900/50 text-lg">
               {t.contact.cta}
             </a>
           </div>
