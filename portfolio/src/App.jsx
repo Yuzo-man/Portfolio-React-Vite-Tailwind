@@ -8,7 +8,7 @@ import { useApp } from "./context/AppContext";
 import {
   SiReact, SiTypescript, SiJavascript, SiVuedotjs, SiNextdotjs,
   SiRedux, SiHtml5, SiCss, SiTailwindcss,
-  SiPython, SiDjango, SiPhp, SiNodedotjs, SiNestjs,
+  SiPython, SiDjango, SiPhp, SiNodedotjs, SiDotnet,
   SiPostgresql, SiMysql, SiSqlite,
   SiGit, SiGithub, SiDocker, SiPostman,
   SiSalesforce, SiKotlin, SiAndroid,
@@ -30,7 +30,7 @@ const iconMap = {
   'Django':            { icon: SiDjango,       color: '#44B78B' },
   'PHP Laravel':       { icon: SiPhp,          color: '#777BB4' },
   'Node.js':           { icon: SiNodedotjs,    color: '#339933' },
-  'NestJS':            { icon: SiNestjs,       color: '#E0234E' },
+  '.NET':              { icon: SiDotnet,       color: '#512BD4' },
   'PostgreSQL':        { icon: SiPostgresql,   color: '#4169E1' },
   'MySQL':             { icon: SiMysql,        color: '#4479A1' },
   'SQLite':            { icon: SiSqlite,       color: '#7FB1C8' },
@@ -57,7 +57,7 @@ const categoryConfig = {
 
 const skillCategories = [
   { category: 'Frontend',       skills: ['React.js','Next.js','Vue.js','TypeScript','JavaScript ES6+','Redux','HTML5','CSS3','Tailwind CSS'] },
-  { category: 'Backend',        skills: ['Python','Django','DRF','Node.js','NestJS','PHP Laravel','API REST','JWT','Microservicios'] },
+  { category: 'Backend',        skills: ['Python','Django','DRF','Node.js','.NET','PHP Laravel','API REST','JWT','Microservicios'] },
   { category: 'Bases de Datos', skills: ['PostgreSQL','MySQL','SQLite'] },
   { category: 'Cloud / AWS',    skills: ['Azure Data Factory','Azure Databricks','Databricks','Power BI','Pandas','NumPy'] },
   { category: 'DevOps / CI-CD', skills: ['Git','GitHub','Docker','Azure DevOps','Git Flow','CI/CD pipelines','Postman'] },
