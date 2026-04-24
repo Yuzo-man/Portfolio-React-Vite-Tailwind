@@ -151,7 +151,7 @@ const App = () => {
           <div className="absolute bottom-20 right-10 w-72 h-72 bg-cyan-400 dark:bg-cyan-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
 
           <div className="relative z-10 max-w-3xl w-full">
-            <p className="text-purple-700 dark:text-purple-400 text-xs font-semibold uppercase tracking-widest mb-6 border border-purple-200 dark:border-purple-800 bg-purple-50 dark:bg-purple-950/50 inline-block px-4 py-1.5 rounded-full">
+            <p className="text-purple-700 dark:text-purple-400 text-sm font-semibold mb-6 border border-purple-200 dark:border-purple-800 bg-purple-50 dark:bg-purple-950/50 inline-block px-4 py-1.5 rounded-full whitespace-nowrap">
               {t.hero.badge}
             </p>
             <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
