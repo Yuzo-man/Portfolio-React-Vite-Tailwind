@@ -1,9 +1,18 @@
 import React from "react";
 import Navbar from './components/Navbar';
 import ButtonGradient from "./assets/svg/ButtonGradient";
-import backgroundSM from "./assets/background/sobre-mi.jpg";
-import backgroundEst from "./assets/background/estudios2.jpg";
 import { useApp } from "./context/AppContext";
+
+const DORE = {
+  hero:       'https://upload.wikimedia.org/wikipedia/commons/9/9d/Paradise_Lost_12.jpg',
+  about:      'https://upload.wikimedia.org/wikipedia/commons/b/b7/Gustave_Dor%C3%A9_-_Dante_et_Virgile_dans_le_neuvi%C3%A8me_cercle_de_l%27Enfer.jpg',
+  skills:     'https://upload.wikimedia.org/wikipedia/commons/9/99/Gustave_Dore_Bible_Tour_de_Babel.jpg',
+  experience: 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Gustav_Dor%C3%A9%2C_Satan_Confronting_Sin_and_Death_at_the_Gates_of_Hell%2C_c_1880.jpg',
+  projects:   "https://upload.wikimedia.org/wikipedia/commons/6/6a/Gustave_Dore_Satan%27s_Despair.jpg",
+  personal:   'https://upload.wikimedia.org/wikipedia/commons/8/86/Paradise_Lost_1.jpg',
+  education:  'https://upload.wikimedia.org/wikipedia/commons/6/67/Gustave_Dore_-_Death_on_the_Pale_Horse.png',
+  contact:    'https://upload.wikimedia.org/wikipedia/commons/9/90/GustaveDoreParadiseLostSatanProfile.jpg',
+};
 
 import {
   SiReact, SiTypescript, SiJavascript, SiVuedotjs, SiNextdotjs,
@@ -141,9 +150,11 @@ const App = () => {
 
         {/* ── HERO ── */}
         <section id="inicio" className="min-h-screen flex flex-col justify-center items-center px-6 text-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-white to-gold-50 dark:from-gray-900 dark:via-gray-900 dark:to-gold-950"></div>
-          <div className="absolute top-20 left-10 w-72 h-72 bg-gold-400 dark:bg-gold-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-72 h-72 bg-cyan-400 dark:bg-cyan-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
+          {/* Gustave Doré – Paradise Lost 12 – Ken Burns */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute inset-0 bg-cover bg-center animate-ken-burns" style={{ backgroundImage: `url('${DORE.hero}')` }} />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white/94 via-white/88 to-white/94 dark:from-gray-900/80 dark:via-gray-900/70 dark:to-gray-900/82"></div>
 
           {/* Fade hero bottom into next section */}
           <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-b from-transparent to-white dark:to-gray-900 pointer-events-none z-20"></div>
@@ -188,9 +199,11 @@ const App = () => {
 
         {/* ── SOBRE MÍ ── */}
         <section id="sobre-mi" className="relative py-24 px-6 overflow-hidden">
-          {/* Imagen de fondo con transición suave arriba y abajo */}
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${backgroundSM})` }}></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-white via-white/88 to-white dark:from-gray-900 dark:via-gray-900/88 dark:to-gray-900"></div>
+          {/* Gustave Doré – Dante y Virgilio en el Noveno Círculo */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute inset-0 bg-cover bg-center animate-drift-bg" style={{ backgroundImage: `url('${DORE.about}')` }} />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white/93 via-white/87 to-white/93 dark:from-gray-900/80 dark:via-gray-900/72 dark:to-gray-900/80"></div>
           <div className="relative z-10 max-w-4xl mx-auto">
             <SectionTitle>{t.about.title}</SectionTitle>
             <div className="bg-white/80 dark:bg-gray-800/75 backdrop-blur-lg rounded-3xl p-8 border border-gray-200 dark:border-gray-700 hover:border-gold-300 dark:hover:border-gold-800 transition-colors shadow-sm dark:shadow-none">
@@ -216,8 +229,13 @@ const App = () => {
         </section>
 
         {/* ── HABILIDADES ── */}
-        <section id="habilidades" className="py-24 px-6 bg-gray-100/60 dark:bg-gray-800/30">
-          <div className="max-w-5xl mx-auto">
+        <section id="habilidades" className="relative py-24 px-6 overflow-hidden">
+          {/* Gustave Doré – Torre de Babel */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute inset-0 bg-cover bg-center animate-drift-bg" style={{ backgroundImage: `url('${DORE.skills}')`, animationDuration: '30s' }} />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-50/95 via-gray-100/92 to-gray-50/95 dark:from-gray-900/85 dark:via-gray-800/78 dark:to-gray-900/85"></div>
+          <div className="relative z-10 max-w-5xl mx-auto">
             <SectionTitle>{t.skills.title}</SectionTitle>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {skillCategories.map((cat) => {
@@ -241,8 +259,13 @@ const App = () => {
         </section>
 
         {/* ── EXPERIENCIA ── */}
-        <section id="experiencia" className="py-24 px-6">
-          <div className="max-w-4xl mx-auto">
+        <section id="experiencia" className="relative py-24 px-6 overflow-hidden">
+          {/* Gustave Doré – Satán en las Puertas del Infierno */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute inset-0 bg-cover bg-center animate-drift-bg" style={{ backgroundImage: `url('${DORE.experience}')`, animationDuration: '26s' }} />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white/94 via-white/90 to-white/94 dark:from-gray-900/82 dark:via-gray-900/75 dark:to-gray-900/82"></div>
+          <div className="relative z-10 max-w-4xl mx-auto">
             <SectionTitle>{t.experience.title}</SectionTitle>
             <div className="relative">
               <div className="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-gold-500 via-blue-500 to-green-500 hidden md:block"></div>
@@ -278,8 +301,13 @@ const App = () => {
         </section>
 
         {/* ── PROYECTOS PROFESIONALES ── */}
-        <section id="proyectos" className="py-24 px-6 bg-gray-100/60 dark:bg-gray-800/30">
-          <div className="max-w-5xl mx-auto">
+        <section id="proyectos" className="relative py-24 px-6 overflow-hidden">
+          {/* Gustave Doré – La Desesperación de Satán */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute inset-0 bg-cover bg-center animate-drift-bg" style={{ backgroundImage: `url('${DORE.projects}')`, animationDuration: '24s' }} />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-50/95 via-gray-100/91 to-gray-50/95 dark:from-gray-900/85 dark:via-gray-800/78 dark:to-gray-900/85"></div>
+          <div className="relative z-10 max-w-5xl mx-auto">
             <SectionTitle>{t.projects.title}</SectionTitle>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {projects.map((proj, i) => (
@@ -304,8 +332,13 @@ const App = () => {
         </section>
 
         {/* ── PROYECTOS PERSONALES ── */}
-        <section id="proyectos-personales" className="py-24 px-6">
-          <div className="max-w-5xl mx-auto">
+        <section id="proyectos-personales" className="relative py-24 px-6 overflow-hidden">
+          {/* Gustave Doré – Paradise Lost 1 */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute inset-0 bg-cover bg-center animate-drift-bg" style={{ backgroundImage: `url('${DORE.personal}')`, animationDuration: '32s' }} />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white/94 via-white/89 to-white/94 dark:from-gray-900/82 dark:via-gray-900/74 dark:to-gray-900/82"></div>
+          <div className="relative z-10 max-w-5xl mx-auto">
             <SectionTitle>{t.personalProjects.title}</SectionTitle>
             <p className="text-center text-gray-500 dark:text-gray-400 text-sm mb-12 -mt-6">{t.personalProjects.subtitle}</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -341,9 +374,11 @@ const App = () => {
 
         {/* ── EDUCACIÓN ── */}
         <section id="educacion" className="relative py-24 px-6 overflow-hidden">
-          {/* Imagen de fondo con transición suave arriba y abajo */}
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${backgroundEst})` }}></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-100 via-gray-100/85 to-gray-100 dark:from-gray-900 dark:via-gray-900/85 dark:to-gray-900"></div>
+          {/* Gustave Doré – La Muerte sobre el Caballo Blanco */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute inset-0 bg-cover bg-center animate-drift-bg" style={{ backgroundImage: `url('${DORE.education}')`, animationDuration: '28s' }} />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-50/94 via-gray-100/88 to-gray-50/94 dark:from-gray-900/80 dark:via-gray-900/72 dark:to-gray-900/80"></div>
           <div className="relative z-10 max-w-4xl mx-auto">
             <SectionTitle>{t.education.title}</SectionTitle>
             <div className="space-y-5">
@@ -371,8 +406,13 @@ const App = () => {
         </section>
 
         {/* ── CONTACTO ── */}
-        <section id="contacto" className="py-24 px-6">
-          <div className="max-w-2xl mx-auto text-center">
+        <section id="contacto" className="relative py-24 px-6 overflow-hidden">
+          {/* Gustave Doré – Perfil de Satán (Paradise Lost) */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute inset-0 bg-cover bg-center animate-drift-bg" style={{ backgroundImage: `url('${DORE.contact}')`, animationDuration: '20s' }} />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white/93 via-white/87 to-white/93 dark:from-gray-900/80 dark:via-gray-900/70 dark:to-gray-900/80"></div>
+          <div className="relative z-10 max-w-2xl mx-auto text-center">
             <SectionTitle>{t.contact.title}</SectionTitle>
             <p className="text-gray-500 dark:text-gray-400 mb-10">{t.contact.subtitle}</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
