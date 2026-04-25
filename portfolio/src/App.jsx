@@ -149,9 +149,7 @@ const App = () => {
           <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-b from-transparent to-white dark:to-gray-900 pointer-events-none z-20"></div>
 
           <div className="relative z-10 max-w-3xl w-full">
-            <span className="text-gold-700 dark:text-gold-400 text-sm font-semibold mb-6 border border-gold-200 dark:border-gold-800 bg-gold-50 dark:bg-gold-950/50 inline-block px-4 py-1.5 rounded-full">
-              {t.hero.badge}
-            </span>
+
             <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
               <span className="bg-gradient-to-r from-gray-900 to-gold-700 dark:from-white dark:via-gold-200 dark:to-gold-400 bg-clip-text text-transparent">
                 Pablo Cerda

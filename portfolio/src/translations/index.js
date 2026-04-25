@@ -7,7 +7,7 @@ export const translations = {
       contacto: 'Contacto', contactar: 'Contactar',
     },
     hero: {
-      badge: 'Disponible para nuevas oportunidades',
+      
       title: 'Desarrollador Full Stack',
       subtitle: 'Ingeniero en Computación e Informática · Santiago, Chile · Inglés C1',
       stats: [
